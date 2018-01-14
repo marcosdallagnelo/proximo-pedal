@@ -1,0 +1,19 @@
+#!/bin/bash
+PATH=$PATH:$(npm bin)
+set -x
+    
+BUILDFOLDER=www/
+ 
+# clean up previous build
+rm -fr $BUILDFOLDER
+ 
+# Prod build
+ionic build --prod
+ 
+# remove unused css
+purifycss $BUILDFOLDER"build/main.css" \
+          $BUILDFOLDER"build/*.js" \
+          --info \
+          --min \
+          --out $BUILDFOLDER"build/main.css" \
+          --whitelist .bar-button-default

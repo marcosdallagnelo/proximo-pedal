@@ -2,18 +2,24 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Ionic App</title>
+  <title>Próximo Pedal</title>
+  <link rel="canonical" href="https://proximo-pedal.firebaseapp.com/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
 
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
+  <meta name="theme-color" content="#1E88E5">
 
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Próximo Pedal">
+  <link rel="apple-touch-icon" href="assets/imgs/icon-512x512.png">
+
+  <meta name="msapplication-TileImage" content="assets/imgs/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#1E88E5">
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -29,7 +35,11 @@
 <body>
 
   <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+  <ion-app class="md">
+    <noscript>
+      <h2 style="padding: 50px; text-align: center;">😱 Você precisa habilitar javascript para essa app funcionar 👊</h2>
+    </noscript>
+  </ion-app>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
